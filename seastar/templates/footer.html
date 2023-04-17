@@ -1,0 +1,51 @@
+{% load static i18n %}
+<div class="section padding-top-bottom-small background-black over-hide footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 text-center text-md-left">
+					<img src="{% static 'zzz.png' %}" alt="">
+					<p class="color-grey mt-4">ÇILDIR MAH. 107 SOK. NO:7<br>MARMARiS/MUĞLA</p>
+				</div>
+				<div class="col-md-4 text-center text-md-left">
+					<h6 class="color-white mb-3">Odalar</h6>
+					{% for product in rooms %}
+					<a href="{{product.get_absolute_url}}">{{product.name}}</a>
+					{% endfor %}
+				</div>
+				<div class="col-md-5 mt-4 mt-md-0 text-center text-md-left logos-footer">
+					<h6 class="color-white mb-3">{% trans 'Hakkımızda' %}</h6>
+					<p class="color-grey mb-4">{% trans 'Egenin eşssiz güzel şehri Marmaris merkezde bulunan Deniz manzaralı 55 odalı boutique otelimizde siz değerli misafirlerimiz için yeniden tasarlanmış tesisimize hoşgeldiniz' %}</p>
+					<img src="img/logos/1.png" alt="">
+					<img src="img/logos/2.png" alt="">
+					<img src="img/logos/3.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section py-4 background-dark over-hide footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+					<p>2023 © CWA</p>
+				</div>
+				<div class="col-md-6 text-center text-md-right">
+					<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+								 <input name="next" type="hidden" value="{{ redirect_to }}" />
+								 {% get_current_language as LANGUAGE_CODE %}
+								 {% get_available_languages as LANGUAGES %}
+								 {% get_language_info_list for LANGUAGES as languages %}
+								 {% for language in languages %}
+								 <button style="padding: 15px 0px; color:white; background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;" type="submit" name="language" value="{{ language.code }}"
+                                                              class="btn header_button ml-auto {% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+									 {{ language.code }}
+								 </button>
+								 {% endfor %}
+							 </form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="scroll-to-top"></div>

@@ -1,0 +1,393 @@
+{% extends "base.html" %}
+
+
+{% load static i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block seo %}
+
+
+<title>Fifty Five Hotel</title>
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<link rel="canonical" href=""/>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<meta name="robots" content="index,follow"/>
+
+<meta name="googlebot" content="index,follow"/>
+
+<meta name="author" content="İhsan Gürol Demirtaş">
+
+<meta name="publisher" content="2020.01" />
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="section background-dark over-hide">
+
+		<div class="hero-center-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-10 col-sm-8 parallax-fade-top">
+						<div class="hero-text">Fifty Five Suites Hotel</div>
+					</div>
+					<div class="col-12 mt-3 mb-5 parallax-fade-top">
+						<div class="hero-stars">
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="slideshow">
+			<div class="slide slide--current parallax-top">
+				<figure class="slide__figure">
+					<div class="slide__figure-inner">
+						<div class="slide__figure-img" style="background-image: url({% static 'slide1.jpg' %})"></div>
+						<div class="slide__figure-reveal"></div>
+					</div>
+				</figure>
+			</div>
+			<div class="slide parallax-top">
+				<figure class="slide__figure">
+					<div class="slide__figure-inner">
+						<div class="slide__figure-img" style="background-image: url({% static 'slide3.jpg' %})"></div>
+						<div class="slide__figure-reveal"></div>
+					</div>
+				</figure>
+			</div>
+			<div class="slide parallax-top">
+				<figure class="slide__figure">
+					<div class="slide__figure-inner">
+						<div class="slide__figure-img" style="background-image: url({% static 'slide4.jpg' %})"></div>
+						<div class="slide__figure-reveal"></div>
+					</div>
+				</figure>
+			</div>
+			<!-- revealer -->
+			<div class="revealer">
+				<div class="revealer__item revealer__item--left"></div>
+				<div class="revealer__item revealer__item--right"></div>
+			</div>
+			<nav class="arrow-nav fade-top">
+				<button class="arrow-nav__item arrow-nav__item--prev">
+					<svg class="icon icon--nav"><use xlink:href="#icon-nav"></use></svg>
+				</button>
+				<button class="arrow-nav__item arrow-nav__item--next">
+					<svg class="icon icon--nav"><use xlink:href="#icon-nav"></use></svg>
+				</button>
+			</nav>
+			<!-- navigation -->
+			<nav class="nav fade-top">
+				<button class="nav__button">
+					<span class="nav__button-text"></span>
+				</button>
+				<h2 class="nav__chapter">Fifty Five Suite</h2>
+				<div class="toc">
+					<a class="toc__item" href="#entry-1">
+						<span class="toc__item-title">Fifty Five Suite</span>
+					</a>
+					<a class="toc__item" href="#entry-2">
+						<span class="toc__item-title">Fifty Five Suite</span>
+					</a>
+					<a class="toc__item" href="#entry-3">
+						<span class="toc__item-title">Fifty Five Suite</span>
+					</a>
+				</div>
+			</nav>
+			<!-- little sides -->
+			<div class="slideshow__indicator"></div>
+			<div class="slideshow__indicator"></div>
+		</div>
+	</div>
+
+
+
+<div class="section padding-top-bottom over-hide">
+		<div class="container">
+			<div class="row">
+				{% for product in welcomes %}
+				<div class="col-md-6 align-self-center">
+					<div class="row justify-content-center">
+						<div class="col-10">
+							<div class="subtitle text-center mb-4">Fifty Five Suit</div>
+							<h2 class="text-center">{{product.title}}</h2>
+							<p class="text-center mt-5">{{product.info | safe}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mt-4 mt-md-0">
+					<div class="img-wrap">
+						<img src="{% if product.image %}{{ product.image.url }}{% else %}{% endif %}" alt="{{product.title}}">
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+<div class="section background-grey over-hide">
+		<div class="container-fluid px-0">
+			{% for product in important %}
+			<div class="row mx-0">
+				<div class="col-xl-6 px-0">
+					<div class="img-wrap" id="rev-1">
+						<img src="{% if product.list %}{{ product.list.url }}{% else %}{% endif %}" alt="">
+						<div class="text-element-over">{{product.name}}</div>
+					</div>
+				</div>
+				<div class="col-xl-6 px-0 mt-4 mt-xl-0 align-self-center">
+					<div class="row justify-content-center">
+						<div class="col-10 col-xl-8 text-center">
+							<h3 class="text-center">{{product.name}}</h3>
+							<p class="text-center mt-4">{{product.info | safe }}</p>
+							<a class="mt-5 btn btn-primary" href="{{product.get_absolute_url}}">{% trans 'İncele' %}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			{% for product in favorite %}
+			<div class="row mx-0">
+				<div class="col-xl-6 px-0 mt-4 mt-xl-0 pb-5 pb-xl-0 align-self-center">
+					<div class="row justify-content-center">
+						<div class="col-10 col-xl-8 text-center">
+							<h3 class="text-center">{{product.name}}</h3>
+							<p class="text-center mt-4">{{product.info | safe}}</p>
+							<a class="mt-5 btn btn-primary" href="{{product.get_absolute_url}}">{% trans 'İncele' %}</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 px-0 order-first order-xl-last mt-5 mt-xl-0">
+					<div class="img-wrap" id="rev-2">
+						<img src="{% if product.list %}{{ product.list.url }}{% else %}{% endif %}" alt="">
+						<div class="text-element-over">sea view suite</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+<div class="section padding-top-bottom over-hide">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8 align-self-center">
+					<div class="subtitle with-line text-center mb-4">Fifty Five Suits</div>
+					<h3 class="text-center padding-bottom-small">Konfor ve Kalite</h3>
+				</div>
+				<div class="section clearfix"></div>
+				<div class="col-sm-6 col-lg-4">
+					<div class="services-box text-center">
+						<img src="{% static 'img/1.svg' %}" alt="">
+						<h5 class="mt-2">{% trans 'Sigarasız odalar' %}</h5>
+						<p class="mt-3">{% trans 'Dünyadaki Yeşilay uygulamasına uygun kriterlerdeki odalarımızda egenin oksijenlerini alabilirsiniz.' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">{% trans 'daha fazlası' %}</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5 mt-sm-0">
+					<div class="services-box text-center">
+						<img src="{% static 'img/2.svg' %}" alt="">
+						<h5 class="mt-2">king beds</h5>
+						<p class="mt-3">{% trans 'Tüm odalarımızda büyük french vardır. Marmaris Konfor otelciliği.' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">{% trans 'daha fazlası' %}</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5 mt-lg-0">
+					<div class="services-box text-center">
+						<img src="{% static 'img/3.svg' %}" alt="">
+						<h5 class="mt-2">{% trans 'Deniz' %}</h5>
+						<p class="mt-3">{% trans 'Odalarımızın yarısından fazlası eşssiz Marmaris deniz manzarılısıdır' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">{% trans 'daha fazlası' %}</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5">
+					<div class="services-box text-center">
+						<img src="{% static 'img/4.svg' %}" alt="">
+						<h5 class="mt-2">{% trans 'Coctails' %}</h5>
+						<p class="mt-3">{% trans 'Otelimize girşte havuz başında barımızda hoş geldin kokyetlimizi deneyebilirsiniz' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">{% trans 'daha fazlası' %}</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5">
+					<div class="services-box text-center">
+						<img src="{% static 'img/5.svg' %}" alt="">
+						<h5 class="mt-2">{% trans 'Havuz' %}</h5>
+						<p class="mt-3">{% trans 'Havuzumuzda barmenlerimizin yapmış olduğu koktyleri içebilirisşiniz.' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">{% trans 'daha fazlası' %}</a>
+					</div>
+				</div>
+				<div class="col-sm-6 col-lg-4 mt-5">
+					<div class="services-box text-center">
+						<img src="{% static 'img/6.svg' %}" alt="">
+						<h5 class="mt-2">{% trans 'Rostorant' %}</h5>
+						<p class="mt-3">{% trans 'Tüm dünya mutfaklarından Şefimizin yaptığı eşsiz yemeklerı denemenizi bekleriz.' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">{% trans 'daha fazlası' %}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="section padding-top-bottom-big over-hide">
+		<div class="parallax" style="background-image: url('{% static 'marmaris.png' %}')"></div>
+		<div class="section z-bigger">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row justify-content-center">
+							<div class="col-md-6 col-xl-4 px-sm-0">
+								<div class="booking-sep-wrap">
+									<div class="input-daterange input-group" id="flight-datepicker-1">
+										<div class="form-item">
+											<span class="fontawesome-calendar"></span>
+											<input class="input-sm" type="text" autocomplete="off" id="start-date" name="start" placeholder="check-in" data-date-format="DD, MM d"/>
+											<span class="date-text date-depart"></span>
+										</div>
+										<div class="form-item">
+											<span class="fontawesome-calendar"></span>
+											<input class="input-sm" type="text" autocomplete="off" id="end-date" name="end" placeholder="check-out" data-date-format="DD, MM d"/>
+											<span class="date-text date-return"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-xl-2 px-sm-0">
+								<div class="quantity">
+									<input type="number" min="1" max="9999" step="1" value="1" >
+								</div>
+							</div>
+							<div class="col-md-3 col-xl-2 px-sm-0">
+								<a class="booking-button-big" href="search.html">Rezervasyon<br>Yap</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="section padding-top-bottom over-hide background-grey">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8 align-self-center">
+					<div class="subtitle with-line text-center mb-4">luxury</div>
+					<h3 class="text-center padding-bottom-small">{% trans 'Odalar' %}</h3>
+				</div>
+				<div class="section clearfix"></div>
+				{% for product in rooms %}
+				<div class="col-md-6">
+					<div class="room-box background-white">
+						<div class="room-name">{{product.name}}</div>
+						<div class="room-per">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<img src="{% if product.list %}{{ product.list.url }}{% else %}{% endif %}" alt="">
+						<div class="room-box-in">
+							<h5 class="">{{product.name}}</h5>
+							<p class="mt-3">{{product.info | safe}}</p>
+							<a class="mt-1 btn btn-primary" href="{{product.get_absolute_url}}">Gecelik {{product.price}} ₺</a>
+							<div class="room-icons mt-4 pt-4">
+								<img src="{% static 'img/5.svg' %}" alt="">
+								<img src="{% static 'img/2.svg' %}" alt="">
+								<img src="{% static 'img/3.svg' %}" alt="">
+								<img src="{% static 'img/1.svg' %}" alt="">
+								<a href="{{product.get_absolute_url}}">{% trans 'İncele' %}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+<div class="section padding-top-bottom-big over-hide">
+		<div class="parallax" style="background-image: url('{% static 'marmaris3.jpeg' %}')"></div>
+		<div class="section z-bigger">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div id="owl-sep-1" class="owl-carousel owl-theme">
+							{% for product in comments %}
+							<div class="item">
+								<div class="quote-sep">
+									<h4>"{{product.info | safe}}"</h4>
+									<h6>{{product.name}}e</h6>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="section padding-top-bottom background-grey over-hide">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8 align-self-center">
+					<div class="subtitle with-line text-center mb-4">Fifty Five Suites Hotel </div>
+					<h3 class="text-center padding-bottom-small">Dining &amp; Bars</h3>
+				</div>
+				<div class="section clearfix"></div>
+			</div>
+			<div class="row background-white p-0 m-0">
+				<div class="col-xl-6 p-0">
+					<div class="img-wrap" id="rev-3">
+						<img src="{% static 'resto.jpeg' %}" alt="">
+					</div>
+				</div>
+				<div class="col-xl-6 p-0 align-self-center">
+					<div class="row justify-content-center">
+						<div class="col-9 pt-4 pt-xl-0 pb-5 pb-xl-0 text-center">
+							<h5 class="">{% trans 'Restorant' %}</h5>
+							<p class="mt-3">3 değişik konsepte hizmet veren restaurantımız Ücretli Ücretsiz tüm dünya mutafklarından lezzetler sunmaktadır.</p>
+							<a class="mt-1 btn btn-primary" href="/restaurant/">{% trans 'İncele' %}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row background-white p-0 m-0">
+				<div class="col-xl-6 p-0 align-self-center">
+					<div class="row justify-content-center">
+						<div class="col-9 pt-4 pt-xl-0 pb-5 pb-xl-0 text-center">
+							<h5 class="">{% trans 'Havuz' %}</h5>
+							<p class="mt-3">{% trans 'Acık otel havuz başında güzel relax müzikler eşliğinde  eşssiz kokteylerizin deneyimini yaşabilirsiniz' %}</p>
+							<a class="mt-1 btn btn-primary" href="/pool/">{% trans 'İncele' %}</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-6 order-first order-xl-last p-0">
+					<div class="img-wrap" id="rev-4">
+						<img src="{% static 'pool.jpeg' %}" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+
+
+{% block jss %}
+{% endblock %}

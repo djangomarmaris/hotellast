@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+
+{% load static i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block seo %}
+
+
+<title>Fifty Five Hotel</title>
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<link rel="canonical" href=""/>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<meta name="robots" content="index,follow"/>
+
+<meta name="googlebot" content="index,follow"/>
+
+<meta name="author" content="İhsan Gürol Demirtaş">
+
+<meta name="publisher" content="2020.01" />
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="section big-55-height over-hide z-bigger">
+
+		<div class="parallax parallax-top" style="background-image: url({% static 'mar.jpeg' %})"></div>
+		<div class="dark-over-pages"></div>
+
+		<div class="hero-center-section pages">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 parallax-fade-top">
+						<div class="hero-text">Get in Touch</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="section padding-top over-hide">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-4">
+					<div class="services-box restaurant text-center">
+						<img src="{% static 'img/res-1.png' %}" alt="">
+						<h5 class="mt-3">{% trans 'Dünya Mutfağı' %}</h5>
+						<p class="mt-3">{% trans 'Gıda mühendisimizin sıklıkla kontrol edildiği mutfağımızda yemekler özenle hazırlanıyor' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-5 mt-md-0">
+					<div class="services-box restaurant text-center">
+						<img src="{% static 'img/res-2.png' %}" alt="">
+						<h5 class="mt-3">{% trans 'Dünyaca ünlü şefler' %}</h5>
+						<p class="mt-3">{% trans 'Şefimizin ilhan verici eşssiz sunumları damak tadınızda kendi evinizde hissedeceksiniz.' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-5 mt-md-0">
+					<div class="services-box restaurant text-center">
+						<img src="{% static 'img/res-3.png' %}" alt="">
+						<h5 class="mt-3">{% trans 'Özel Mutfak' %}</h5>
+						<p class="mt-3">{% trans 'Misafirlerimizin istedikleri yemekler sağlıkları konusunda bilgi alınarak özenle hazırlanmaktadır.	' %}</p>
+						<a class="mt-1 btn btn-primary" href="services.html">read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="section padding-top-bottom over-hide">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8 align-self-center">
+					<div class="subtitle with-line text-center mb-4">gallery</div>
+					<h3 class="text-center padding-bottom-small">Restaurant</h3>
+				</div>
+				<div class="section clearfix"></div>
+				{% for x in product %}
+				<div class="col-md-4">
+					<a href="{% if x.image %}{{ x.image.url }}{% else %}{% endif %}" data-fancybox="gallery">
+						<div class="img-wrap gallery-small">
+							<img src="{% if x.image %}{{ x.image.url }}{% else %}{% endif %}" alt="">
+						</div>
+					</a>
+					<br>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+
+
+{% block jss %}
+{% endblock %}

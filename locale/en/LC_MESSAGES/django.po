@@ -1,0 +1,232 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-17 22:15+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: hotel/settings.py:135
+msgid "English"
+msgstr ""
+
+#: hotel/settings.py:136
+msgid "Russian"
+msgstr ""
+
+#: hotel/settings.py:137
+msgid "Turkish"
+msgstr ""
+
+#: seastar/templates/central/about.html:47 seastar/templates/footer.html:16
+#: seastar/templates/navbar.html:63
+msgid "Hakkımızda"
+msgstr "About"
+
+#: seastar/templates/central/contact.html:47 seastar/templates/navbar.html:75
+msgid "İletişim"
+msgstr "Contact Us"
+
+#: seastar/templates/central/contact.html:65
+msgid "İsim"
+msgstr "Name"
+
+#: seastar/templates/central/contact.html:72
+msgid "Mesajınız"
+msgstr "Messages"
+
+#: seastar/templates/central/contact.html:88
+msgid "Adres"
+msgstr "Adress"
+
+#: seastar/templates/central/contact.html:96
+msgid "Şehir"
+msgstr "City"
+
+#: seastar/templates/central/contact.html:114
+msgid "Telefon"
+msgstr "Phone"
+
+#: seastar/templates/central/detail.html:60
+msgid "Sigarasız"
+msgstr "No Smoke"
+
+#: seastar/templates/central/detail.html:66
+msgid "Büyük Yatak"
+msgstr "Big Bads"
+
+#: seastar/templates/central/detail.html:72
+msgid "Denize Yakın"
+msgstr "Sea"
+
+#: seastar/templates/central/detail.html:78
+msgid "Özel İçecekler"
+msgstr "Special Drinks"
+
+#: seastar/templates/central/detail.html:84
+msgid "Havuz Mevcut"
+msgstr "Pool"
+
+#: seastar/templates/central/detail.html:90
+msgid "Oda Servisi"
+msgstr "Room Service"
+
+#: seastar/templates/central/detail.html:184
+msgid "YETİŞKİN"
+msgstr "Adult"
+
+#: seastar/templates/central/detail.html:194
+msgid "ÇOCUK"
+msgstr "Kid"
+
+#: seastar/templates/central/detail.html:205
+msgid "REZERVASYON"
+msgstr "Reservation"
+
+#: seastar/templates/central/gallery.html:47
+#: seastar/templates/central/gallery.html:59 seastar/templates/navbar.html:72
+msgid "Galeri"
+msgstr "Gallery"
+
+#: seastar/templates/central/gallery.html:60
+msgid "Otel Resimlerimiz"
+msgstr "Hotel Gallery"
+
+#: seastar/templates/central/index.html:162
+#: seastar/templates/central/index.html:175
+#: seastar/templates/central/index.html:314
+#: seastar/templates/central/index.html:364
+#: seastar/templates/central/index.html:375
+msgid "İncele"
+msgstr "More"
+
+#: seastar/templates/central/index.html:200
+msgid "Sigarasız odalar"
+msgstr "No Smoke"
+
+#: seastar/templates/central/index.html:201
+msgid ""
+"Dünyadaki Yeşilay uygulamasına uygun kriterlerdeki odalarımızda egenin "
+"oksijenlerini alabilirsiniz."
+msgstr "You can get the oxygen of the Aegean in our rooms that meet the criteria for the Green Crescent application in the world."
+
+#: seastar/templates/central/index.html:202
+#: seastar/templates/central/index.html:210
+#: seastar/templates/central/index.html:218
+#: seastar/templates/central/index.html:226
+#: seastar/templates/central/index.html:234
+#: seastar/templates/central/index.html:242
+msgid "daha fazlası"
+msgstr "More"
+
+#: seastar/templates/central/index.html:209
+msgid "Tüm odalarımızda büyük french vardır. Marmaris Konfor otelciliği."
+msgstr "All our rooms have large french. Marmaris Comfort hotel management."
+
+#: seastar/templates/central/index.html:216
+msgid "Deniz"
+msgstr "Sea"
+
+#: seastar/templates/central/index.html:217
+msgid "Odalarımızın yarısından fazlası eşssiz Marmaris deniz manzarılısıdır"
+msgstr "More than half of our rooms are brand new with unique Marmaris sea view."
+
+#: seastar/templates/central/index.html:224
+msgid "Coctails"
+msgstr "Cocktails"
+
+#: seastar/templates/central/index.html:225
+msgid ""
+"Otelimize girşte havuz başında barımızda hoş geldin kokyetlimizi "
+"deneyebilirsiniz"
+msgstr "You can try my welcome cocktail at our poolside bar upon arrival at our hotel."
+
+#: seastar/templates/central/index.html:232
+#: seastar/templates/central/index.html:373 seastar/templates/navbar.html:69
+msgid "Havuz"
+msgstr "Pool"
+
+#: seastar/templates/central/index.html:233
+msgid "Havuzumuzda barmenlerimizin yapmış olduğu koktyleri içebilirisşiniz."
+msgstr "You can drink cocktails made by the bartenders in our pool."
+
+#: seastar/templates/central/index.html:240
+msgid "Rostorant"
+msgstr "Restaurant"
+
+#: seastar/templates/central/index.html:241
+msgid ""
+"Tüm dünya mutfaklarından Şefimizin yaptığı eşsiz yemeklerı denemenizi "
+"bekleriz."
+msgstr "Tüm dünya mutfaklarından Şefimizin yaptığı eşsiz yemeklerı denemenizi bekleriz."
+
+#: seastar/templates/central/index.html:290 seastar/templates/navbar.html:54
+msgid "Odalar"
+msgstr "Rooms"
+
+#: seastar/templates/central/index.html:362 seastar/templates/navbar.html:66
+msgid "Restorant"
+msgstr "Restaurant"
+
+#: seastar/templates/central/index.html:374
+msgid ""
+"Acık otel havuz başında güzel relax müzikler eşliğinde  eşssiz kokteylerizin "
+"deneyimini yaşabilirsiniz"
+msgstr "You can experience unique cocktails accompanied by nice relax music by the poolside of the open hotel."
+
+#: seastar/templates/central/restaurant.html:60
+msgid "Dünya Mutfağı"
+msgstr "World Kitchen"
+
+#: seastar/templates/central/restaurant.html:61
+msgid ""
+"Gıda mühendisimizin sıklıkla kontrol edildiği mutfağımızda yemekler özenle "
+"hazırlanıyor"
+msgstr "Meals are carefully prepared in our kitchen, where the food engineer is frequently checked."
+
+#: seastar/templates/central/restaurant.html:68
+msgid "Dünyaca ünlü şefler"
+msgstr "World OfChef"
+
+#: seastar/templates/central/restaurant.html:69
+msgid ""
+"Şefimizin ilhan verici eşssiz sunumları damak tadınızda kendi evinizde "
+"hissedeceksiniz."
+msgstr "You will feel at home with the taste of our chef's inspiring unique presentations."
+
+#: seastar/templates/central/restaurant.html:76
+msgid "Özel Mutfak"
+msgstr "Special Kitchen"
+
+#: seastar/templates/central/restaurant.html:77
+msgid ""
+"Misafirlerimizin istedikleri yemekler sağlıkları konusunda bilgi alınarak "
+"özenle hazırlanmaktadır.\t"
+msgstr "The meals requested by our guests are carefully prepared by taking information about their health."
+
+#: seastar/templates/footer.html:17
+msgid ""
+"Egenin eşssiz güzel şehri Marmaris merkezde bulunan Deniz manzaralı 55 odalı "
+"boutique otelimizde siz değerli misafirlerimiz için yeniden tasarlanmış "
+"tesisimize hoşgeldiniz"
+msgstr "Welcome to our redesigned facility for you, our valued guests, in our 55-room boutique hotel with sea view, located in the center of Marmaris, the unique beautiful city of the Aegean."
+
+#: seastar/templates/navbar.html:51
+msgid "ana sayfa"
+msgstr "Home"
+
+#: seastar/templates/navbar.html:78
+msgid "Rezervasyon"
+msgstr "Reservation"

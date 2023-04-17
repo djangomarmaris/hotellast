@@ -1,0 +1,82 @@
+{% load static i18n %}
+<div class="loader">
+		<div class="loader__figure"></div>
+	</div>
+
+	<svg class="hidden">
+		<svg id="icon-nav" viewBox="0 0 152 63">
+			<title>navarrow</title>
+			<path d="M115.737 29L92.77 6.283c-.932-.92-1.21-2.84-.617-4.281.594-1.443 1.837-1.862 2.765-.953l28.429 28.116c.574.57.925 1.557.925 2.619 0 1.06-.351 2.046-.925 2.616l-28.43 28.114c-.336.327-.707.486-1.074.486-.659 0-1.307-.509-1.69-1.437-.593-1.442-.315-3.362.617-4.284L115.299 35H3.442C2.032 35 .89 33.656.89 32c0-1.658 1.143-3 2.552-3H115.737z"/>
+		</svg>
+	</svg>
+
+
+	<!-- Nav and Logo
+	================================================== -->
+
+	<nav id="menu-wrap" class="menu-back cbp-af-header">
+		<div class="menu-top background-black">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 px-0 px-md-3 pl-1 py-3">
+						<span class="call-top">call us:</span> <a href="#" class="call-top">(381) 60 422 4256</a>
+					</div>
+					<div class="col-6 px-0 px-md-3 py-3 text-right">
+						<div class="lang-wrap">
+							 <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+								 <input name="next" type="hidden" value="{{ redirect_to }}" />
+								 {% get_current_language as LANGUAGE_CODE %}
+								 {% get_available_languages as LANGUAGES %}
+								 {% get_language_info_list for LANGUAGES as languages %}
+								 {% for language in languages %}
+								 <button style="padding: 15px 0px; color:white; background-color: Transparent;background-repeat:no-repeat;border: none;cursor:pointer;overflow: hidden;" type="submit" name="language" value="{{ language.code }}"
+                                                              class="btn header_button ml-auto {% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+									 {{ language.code }}
+								 </button>
+								 {% endfor %}
+							 </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<a href="/" >
+				<div class="logo">
+					<img src="{% static 'zzz.png' %}" alt="">
+				</div>
+			</a>
+			<ul>
+				<li>
+					<a class="curent-page" href="/" >{% trans 'ana sayfa' %}</a>
+				</li>
+				<li>
+					<a href="#" >{% trans 'Odalar' %}</a>
+					<ul>
+						{% for product in rooms %}
+						<li><a href="{{product.get_absolute_url}}">{{product.name}}</a></li>
+						{% endfor %}
+
+					</ul>
+				</li>
+				<li>
+					<a href="/about/">{% trans 'Hakkımızda' %}</a>
+				</li>
+				<li>
+					<a href="/restaurant/">{% trans 'Restorant' %}</a>
+				</li>
+				<li>
+					<a href="/pool/">{% trans 'Havuz' %}</a>
+				</li>
+				<li>
+					<a href="/gallery/">{% trans 'Galeri' %}</a>
+				</li>
+				<li>
+					<a href="/contact/">{% trans 'İletişim' %}</a>
+				</li>
+				<li>
+					<a href="search.html"><span>{% trans 'Rezervasyon' %}</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>

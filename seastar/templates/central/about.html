@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+
+{% load static i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block seo %}
+
+
+<title>Fifty Five Hotel</title>
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<link rel="canonical" href=""/>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<meta name="robots" content="index,follow"/>
+
+<meta name="googlebot" content="index,follow"/>
+
+<meta name="author" content="İhsan Gürol Demirtaş">
+
+<meta name="publisher" content="2020.01" />
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<div class="section big-55-height over-hide z-bigger">
+
+		<div class="parallax parallax-top" style="background-image: url({% static 'mar.jpeg' %})"></div>
+		<div class="dark-over-pages"></div>
+
+		<div class="hero-center-section pages">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 parallax-fade-top">
+						<div class="hero-text">{% trans 'Hakkımızda' %}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="section padding-top-bottom over-hide">
+		<div class="container">
+			<div class="row">
+				{% for product in welcomes %}
+				<div class="col-md-6 align-self-center">
+					<div class="row justify-content-center">
+						<div class="col-10">
+							<div class="subtitle text-center mb-4">Fifty Five Suit</div>
+							<h2 class="text-center">{{product.title}}</h2>
+							<p class="text-center mt-5">{{product.info | safe}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mt-4 mt-md-0">
+					<div class="img-wrap">
+						<img src="{% if product.image %}{{ product.image.url }}{% else %}{% endif %}" alt="{{product.title}}">
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+
+
+
+{% block jss %}
+{% endblock %}
